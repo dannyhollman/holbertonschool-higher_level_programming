@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 import calculator_1
-from sys import argv
+import sys
 
 
 def main():
-    if len(argv) != 4:
+    if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    if argv[2] not in "+_*/":
+    if sys.argv[2] not in "+_*/":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
-    if argv[2] == '+':
-        print("{} + {} = {}".format(argv[1], argv[3],
-              (int(argv[1]) + int(argv[3]))))
+    if sys.argv[2] == '+':
+        print("{} + {} = {}".format(sys.argv[1], sys.argv[3],
+              (int(sys.argv[1]) + int(sys.argv[3]))))
 
 if __name__ == "__main__":
     main()
