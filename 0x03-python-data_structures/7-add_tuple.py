@@ -8,4 +8,5 @@ def add_tuple(a=(), b=()):
         b = (0, 0)
     if len(b) == 1:
         b = (b[0], 0)
-    return (tuple(map(sum, zip(a, b))))
+    x = ((a[0] + b[0]), (a[1] + b[1]))
+    return x
