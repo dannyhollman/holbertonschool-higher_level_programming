@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
 	}
 	if (len % 2 != 0)
 	{
-		while (start < (len / 2))
+		while (start < len)
 		{
 			if (numbers[start] != numbers[len])
 				return (0);
