@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-def add_tuple(tuple_a=(), tuple_b=()):
-    if not
-    x = ((tuple_a[0] + tuple_b[0]), (tuple_a[1] + tuple_b[1]))
-    return x
+def add_tuple(a=(), b=()):
+    if len(a) == 0:
+        a = (0, 0)
+    if len(a) == 1:
+        a = (a[0], 0)
+    if len(b) == 0:
+        b = (0, 0)
+    if len(b) == 1:
+        b = (b[0], 0)
+    return (tuple(map(sum, zip(a, b))))
