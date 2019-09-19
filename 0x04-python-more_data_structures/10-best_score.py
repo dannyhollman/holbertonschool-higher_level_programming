@@ -4,4 +4,3 @@ def best_score(a_dictionary):
         return None
     x = max(a_dictionary.items(), key=lambda x: x[1])[0]
     return x
-
