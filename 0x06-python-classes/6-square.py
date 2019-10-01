@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0, position=(0, 0)):
-        self.check_size(size)
-        self.check_position(position)
-
         self.__size = size
         self.position = position
 
@@ -29,10 +26,10 @@ class Square:
             print()
 
         for x in range(self.position[1]):
-            print("\n", end="")
+            print()
 
         for i in range(self.__size):
-            if self.position[1] == 0:
+            for x in range(self.position[1]):
                 print(" " * self.position[0], end="")
 
             for j in range(self.__size):
@@ -47,7 +44,7 @@ class Square:
     @position.setter
     def position(self, value):
         if not isinstance(value, tuple):
-            raise TypeError("python sucks")
+            raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
 
