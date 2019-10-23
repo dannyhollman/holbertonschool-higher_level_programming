@@ -1,11 +1,18 @@
 #!/usr/bin/python3
 """unittest for Square class"""
 import unittest
+import pep8
 from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
     """test Square class"""
+    def test_pep8(self):
+        """tests PEP8 format"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/square.py'])
+        self.assertEqual(result.total_errors, 0, "Found code style errors (and warnings).")
+
     def test_sqr(self):
         """test square"""
         test = Square(10)

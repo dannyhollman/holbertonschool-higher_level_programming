@@ -1,11 +1,18 @@
 #!/usr/bin/python3
 """unittest for Rectangle"""
 import unittest
+import pep8
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
     """class to test Rectangle"""
+    def test_pep8(self):
+        """tests PEP8 format"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/rectangle.py'])
+        self.assertEqual(result.total_errors, 0, "Found code style errors (and warnings).")
+
     def test_rec(self):
         """test rectangle class"""
         test = Rectangle(10, 2)
