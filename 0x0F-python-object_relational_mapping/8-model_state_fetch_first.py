@@ -14,7 +14,10 @@ def main():
     session = Session()
     result = session.query(State).first()
 
-    print(str(result.id) + ': ' + str(result.name))
+    if result:
+        print(str(result.id) + ': ' + str(result.name))
+    else:
+        print('Nothing')
 
 
 if __name__ == "__main__":
