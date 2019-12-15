@@ -12,7 +12,8 @@ def main():
             WHERE states.name LIKE 'N%'\
             ORDER BY id ASC;")
     for row in cursor.fetchall():
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
 
 if __name__ == "__main__":
