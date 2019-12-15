@@ -11,7 +11,8 @@ def main():
     cursor.execute("SELECT id, name FROM states WHERE states.name\
             LIKE '{}' ORDER BY id ASC;".format(argv[4]))
     for row in cursor.fetchall():
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
 
 
 if __name__ == "__main__":
