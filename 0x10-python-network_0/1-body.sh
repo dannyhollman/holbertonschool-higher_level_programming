@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # sends GET request and displays body of response
 curl -sL "$@"
