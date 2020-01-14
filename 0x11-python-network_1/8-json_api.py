@@ -2,7 +2,6 @@
 """ sends POST request with letter as prameter """
 import requests
 from sys import argv
-import json
 
 
 def main():
