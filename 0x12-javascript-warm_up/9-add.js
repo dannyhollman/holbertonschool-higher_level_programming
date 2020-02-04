@@ -1,0 +1,7 @@
+#!/usr/bin/node
+
+if (!process.argv[2] || !process.argv[3]) {
+  console.log('NaN');
+} else {
+  console.log(Number(process.argv[2]) + Number(process.argv[3]));
+}
